@@ -1,4 +1,4 @@
-def prime_factor(n):
+def prime_factors(n):
     result = []
     remainder = n
     factor = 2
