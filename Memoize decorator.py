@@ -19,3 +19,15 @@ def fib(i):
 fib = memo(fib)
 
 fib(100)
+
+def C(n,k):
+    if k == 0: 
+        return 1
+    elif n == 0: 
+        return 0
+    else:
+        return C(n-1,k-1) + C(n-1,k)
+        
+C = memo(C)
+
+C(100, 50)
