@@ -1,4 +1,4 @@
-ef merge_sort(seq):
+def merge_sort(seq):
     """Accepts a mutable sequence. Utilizes merge_sort to sort in place, return
     a sorted sequence"""
     if len(seq) == 1:
@@ -31,3 +31,18 @@ ef merge_sort(seq):
             r += 1; k += 1
 
         return seq
+        
+        
+from heapq import merge
+
+def merge_sort2(m):
+    if len(m) <= 1:
+        return m
+
+    middle = len(m) / 2
+    left = m[:middle]
+    right = m[middle:]
+
+    left = merge_sort2(left)
+    right = merge_sort2(right)
+    return list(merge(left, right))
