@@ -1,3 +1,9 @@
+'''
+Created on Jun 5, 2022
+
+@author: Jim Yin
+'''
+
 def prime_factors(n):
     result = []
     remainder = n
@@ -13,3 +19,5 @@ def prime_factors(n):
                 factor += 2
             
     return result
+
+print(prime_factors(234224232213232249))
