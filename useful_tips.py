@@ -5,7 +5,7 @@ Created on Jun 5, 2022
 '''
 
 '''
-Iterate with enumerate instead of rane(len(x))
+Iterate with enumerate instead of range(len(x))
 '''
 
 data = [1, 2, -4, -3]
@@ -98,3 +98,15 @@ Format Strings with f-strings
 Concatenate strings with .join()
 '''
 
+'''
+Use content manager to open file
+'''
+
+with open("filename.csv") as f:
+    lines = f.read()
+    
+'''
+Use "is" for comparison to None, True, and False
+'''
+
+    
