@@ -1,4 +1,4 @@
-from functools import wraps
+from functools import wraps, cache
 
 def memo(func):
     cache = {}                             # Stored subproblem solutions
@@ -8,18 +8,20 @@ def memo(func):
             cache[args] = func(*args)      # Compute & cache the solution
         return cache[args]                 # Return the cached solution
     return wrap         
-    
-    
+
+
+@cache    
 def fib(i):
     if i < 2:
         return 1
     else:
         return fib(i-1) + fib(i-2)
         
-fib = memo(fib)
 
-fib(100)
+print(fib(100))
 
+
+@cache
 def C(n,k):
     if k == 0: 
         return 1
@@ -28,6 +30,5 @@ def C(n,k):
     else:
         return C(n-1,k-1) + C(n-1,k)
         
-C = memo(C)
 
-C(100, 50)
+print(C(100, 50))
